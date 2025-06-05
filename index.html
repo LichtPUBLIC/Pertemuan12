@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 12 - JavaScript HTML DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Form Data Mahasiswa</h1>
+        
+        <form id="studentForm">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap</label>
+                <div class="input-icon name-icon">
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nim">NIM</label>
+                    <div class="input-icon nim-icon">
+                        <input type="text" id="nim" name="nim" placeholder="Masukkan NIM" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="angkatan">Angkatan</label>
+                    <div class="input-icon year-icon">
+                        <select id="angkatan" name="angkatan" required>
+                            <option value="">Pilih Angkatan</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Peminatan pada bidang:</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="programming" name="peminatan" value="Programming" required>
+                        <label for="programming">Programming</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="desain" name="peminatan" value="Desain" required>
+                        <label for="desain">Desain</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="jaringan" name="peminatan" value="Jaringan" required>
+                        <label for="jaringan">Jaringan</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="data" name="peminatan" value="Data" required>
+                        <label for="data">Data</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <div class="input-icon email-icon">
+                    <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Nomor Telepon</label>
+                <div class="input-icon phone-icon">
+                    <input type="tel" id="phone" name="phone" placeholder="08xxxxxxxxxx" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="alamat">Alamat</label>
+                <div class="input-icon address-icon">
+                    <textarea id="alamat" name="alamat" placeholder="Masukkan alamat lengkap" required rows="3"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="tanggal">Tanggal Lahir</label>
+                <div class="input-icon date-icon">
+                    <input type="date" id="tanggal" name="tanggal" required>
+                </div>
+            </div>
+
+            <button type="submit" class="btn">✨ Tampilkan Data</button>
+        </form>
+
+        <div id="resultModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>🎉 Data Mahasiswa</h3>
+                <div class="modal-result-item">
+                    <strong>Nama:</strong> <span id="resultNama"></span>
+                </div>
+                <div class="modal-result-item">
+                    <strong>NIM:</strong> <span id="resultNim"></span>
+                </div>
+                <div class="modal-result-item">
+                    <strong>Angkatan:</strong> <span id="resultAngkatan"></span>
+                </div>
+                <div class="modal-result-item">
+                    <strong>Peminatan:</strong> <span id="resultPeminatan"></span>
+                </div>
+                <div class="modal-result-item">
+                    <strong>Email:</strong> <span id="resultEmail"></span>
+                </div>
+                <div class="modal-result-item">
+                    <strong>Telepon:</strong> <span id="resultPhone"></span>
+                </div>
+                <div class="modal-result-item">
+                    <strong>Alamat:</strong> <span id="resultAlamat"></span>
+                </div>
+                <div class="modal-result-item">
+                    <strong>Tanggal Lahir:</strong> <span id="resultTanggal"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
